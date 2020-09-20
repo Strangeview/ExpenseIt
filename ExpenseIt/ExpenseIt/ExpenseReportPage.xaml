@@ -1,0 +1,69 @@
+﻿<Page x:Class="ExpenseIt.ExpenseReportPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExpenseIt"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ExpenseIt - View Expense">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Picture/20151004_123658000_iOS.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" Style="{StaticResource headerTextStyle}">Expense Report for:</Label>
+        <Grid Margin="10" Grid.Column="1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <!-- name -->
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
+                <Label Style="{StaticResource labelStyle}">Names:</Label>
+                <Label Style="{StaticResource labelStyle}"></Label>
+            </StackPanel>
+            <!-- Department -->
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
+                <Label Style="{StaticResource labelStyle}">Departments:</Label>
+                <Label Style="{StaticResource labelStyle}"></Label>
+            </StackPanel>
+            <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Border Grid.Column="0" Grid.Row="0" Style="{StaticResource listHeaderStyle}">
+                    <Label Style="{StaticResource listHeaderTextStyle}">Expense Type</Label>
+                </Border>
+                <ListBox Grid.Column="0" Grid.Row="1">
+                    
+                </ListBox>
+                <Border Grid.Column="2" Grid.Row="0" Style="{StaticResource listHeaderStyle}">
+                    <Label Style="{StaticResource listHeaderTextStyle}">Amount</Label>
+                </Border>
+                <ListBox Grid.Column="2" Grid.Row="1">
+                    
+                </ListBox>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
